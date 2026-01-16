@@ -49,6 +49,10 @@ export const metadata: Metadata = {
   },
 };
 
+// Components
+import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -88,7 +92,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={cn(
-        "min-h-screen bg-background font-sans antialiased pb-16 md:pb-0", // Padding for mobile bar
+        "min-h-screen bg-background font-sans antialiased pb-16 md:pb-0 flex flex-col",
         inter.variable,
         manrope.variable
       )}>
@@ -96,9 +100,14 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        {children}
+        <Header />
+        <main className="flex-1">
+          {children}
+        </main>
+        <Footer />
         <MobileStickyBar />
       </body>
     </html>
   );
 }
+
