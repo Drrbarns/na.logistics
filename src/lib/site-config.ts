@@ -4,6 +4,7 @@ export const siteConfig = {
     description: "Total transport management consultants providing efficient services on the road transport system in Ghana. Tailored for corporate and individual needs.",
     url: "https://unknown-placeholder.com", // Placeholder
     ogImage: "https://unknown-placeholder.com/og.jpg",
+    email: "info@nalogistics.com",
 
     hotline: "0248323667",
     phones: {
